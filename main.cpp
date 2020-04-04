@@ -2,7 +2,8 @@
 #include <cmath>
 #include <iomanip>
 using namespace::std;
-double f(double x){     return sqrt(x);     }
+float g=32.17, s0=300, m=0.25, k=0.1;
+double f(double t){     return s0 - ( (m*g)/k)*t + ( (pow(m,2)*g)/-pow(k,2) )*(1.0-exp( (-k*t)/m));     }
 
 void bisection(double a, double b, double TOL){
     int n = ceil(log2(( b - a) / TOL ) );
